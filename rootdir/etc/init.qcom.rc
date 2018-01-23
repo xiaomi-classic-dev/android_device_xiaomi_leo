@@ -102,19 +102,6 @@ on boot
     chmod 2770 /dev/socket/qmux_nfc
     chmod 0666 /sys/class/leds/flashlight/brightness
 
-    # Leds
-    chown system system /sys/class/leds/red/duty_pcts
-    chown system system /sys/class/leds/green/duty_pcts
-    chown system system /sys/class/leds/blue/duty_pcts
-    chown system system /sys/class/leds/blue/ramp_step_ms
-    chown system system /sys/class/leds/red/ramp_step_ms
-    chown system system /sys/class/leds/green/ramp_step_ms
-
-    chown system system /sys/class/leds/red/blink
-    chown system system /sys/class/leds/green/blink
-    chown system system /sys/class/leds/blue/blink
-
-
     mkdir /persist/bluetooth 0770 bluetooth bluetooth
 
     #Create NETMGR daemon socket area
@@ -198,6 +185,7 @@ on boot
     chown radio radio /data/misc/radio/copy_complete
     chmod 0660 /data/misc/radio/copy_complete
 
+<<<<<<< HEAD:rootdir/etc/init.qcom.rc
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
@@ -209,6 +197,11 @@ on boot
 
     #VibratorHW
     chown system system /sys/devices/virtual/timed_output/vibrator/amp
+=======
+    # Touchscreen
+    chown root system /proc/touchscreen/double_tap_enable
+    chmod 0660 /proc/touchscreen/double_tap_enable
+>>>>>>> d4b0b386... init: move leds chown/chmod to light hal rc file:rootdir/init.qcom.rc
 
     #torch
     chown system system /sys/class/leds/led:torch_0/brightness
