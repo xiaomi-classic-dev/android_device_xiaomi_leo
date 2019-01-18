@@ -13,9 +13,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.maxpermixer=5
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=560
-
 # Display feature support
 # bit0-ColorPrefer bit1-EyeCare bit2-AD bit3-CE bit4-CABC bit5-SRGB
 PRODUCT_PROPERTY_OVERRIDES += \
